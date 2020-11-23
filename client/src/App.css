@@ -1,0 +1,53 @@
+
+.container{
+  margin-top:1.5em;
+}
+.projectTabs{
+  position: relative;
+  z-index:-1;
+  border:1px solid black;
+  background:light gray;
+  border-bottom:none;
+  font-size: large;
+  padding:.5em;
+  box-shadow: 0 0 17px rgb(0, 0, 0, .39);
+  background: white;
+}
+.currentTab{
+  border-top-left-radius: 1em;
+  font-weight:bold;
+  z-index:0;
+}
+.lastTab{
+  border-top-right-radius: 1em;
+  box-shadow: 5px 6px 17px rgb(0, 0, 0, .39);
+  z-index: -1;
+}
+#main{
+  position: relative;
+  padding:1em;
+  border:1px solid black;
+  box-shadow: 11px 9px 17px rgb(0, 0, 0, .39);
+  z-index:2;
+  background: rgba(255,255,255,.8);
+}
+#main-left{
+  padding:0;
+}
+#links{
+  margin-top: .5em;
+}
+#about{  
+  background: rgba(255,255,255,.75);
+}
+.projectTitle{
+  text-align: center;
+  font-weight: bold;
+  text-shadow: 8px 5px 8px rgb(0, 0, 0, .34);
+}
+blockquote{
+  margin-top: .5em;;
+  text-indent:.5em;
+  font-family: 'Roboto', serif;
+  margin-left:.5em;
+}

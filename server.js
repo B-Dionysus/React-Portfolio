@@ -18,14 +18,14 @@ if (process.env.NODE_ENV === 'production') {
     app.use(express.static('client/build'))
 };
 
-// API and View Routes
-app.get("/test/",(res, req)=>
- // .get(categoryController.loadCatInfo)
- {
-     console.log("Hello?");
-     return res.json({test:"Hello"})
- }
-);
+// // API and View Routes
+// app.get("/test/",(res, req)=>
+//  // .get(categoryController.loadCatInfo)
+//  {
+//      console.log("Hello?");
+//      return res.json({test:"Hello"})
+//  }
+// );
 
 app.use(routes);
 // Start the server

@@ -5,13 +5,11 @@ const genericController = require("../../controllers/genericController");
 const categoryController = require("../../controllers/categoryController");
 // generic routes
 // router.use("/generic", genericRoutes);
-router.get("/aboutInfo",(res, req)=>
- // .get(categoryController.loadCatInfo)
- {
-     console.log("Hello?");
-     return res.json({test:"Hello"})
- }
-);
-
+// router.get("/aboutInfo",(req, res)=>
+//  {
+//     .get(categoryController.loadCatInfo)
+//  }
+// );
+router.get("/aboutInfo",categoryController.loadCatInfo);
 module.exports = router;
  

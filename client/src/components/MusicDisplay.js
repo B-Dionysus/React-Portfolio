@@ -7,10 +7,10 @@ function MainDisplay() {
     const [about, setAbout] = useState({title:"Loading...", about:"Sorry, still trying to load"});
 
     useEffect(()=>{   
+        
         getAboutPageInfo()
         .then(res=>{
             if(res){
-                console.log({res});
                 setAbout(res.data[0]);
             }
         }); 

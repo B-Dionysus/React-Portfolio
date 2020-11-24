@@ -4,7 +4,6 @@
 }
 .projectTabs{
   position: relative;
-  z-index:1;
   border:1px solid black;
   background:light gray;
   border-bottom:none;
@@ -13,10 +12,17 @@
   box-shadow: 0 0 17px rgb(0, 0, 0, .39);
   background: white;
 }
+.projectTabs a{
+  color: black;
+}
+.nav-link {
+  font-weight: bold;
+}
+.nav-link-active{
+  font-weight: bold;
+}
 .currentTab{
   border-top-left-radius: 1em;
-  font-weight:bold;
-  z-index:0;
 }
 .lastTab{
   border-top-right-radius: 1em;
@@ -57,14 +63,26 @@ blockquote{
 }
 
 .portfolio-item{
-  width: 30vw;
-  height: 30vw;
-  margin: auto;
-  margin-top: 2rem;
+  width: 25vw;
+  height: 25vw;
+  margin: 2em auto .5em auto;
+  
   background-size: contain;
   background-repeat: no-repeat;
   border: 2px solid black;
   border-radius: 1em;
   box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
   background-size:cover;
+}
+.portfolio-item-list{
+  text-align: center;
+}
+.github-link{
+  color:black;
+  font-size:110%;
+  text-shadow: 8px 5px 8px rgb(0, 0, 0, .34);
+}
+#contact a{
+  color:black;  
+  
 }

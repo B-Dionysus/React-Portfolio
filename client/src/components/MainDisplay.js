@@ -11,11 +11,9 @@ function MainDisplay() {
         getAboutPageInfo()
         .then(res=>{
             if(res){
-                console.log({res});
                 setAbout(res.data[0]);
             }
         }); 
-
     },[]);
  
 

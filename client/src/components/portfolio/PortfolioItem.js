@@ -1,19 +1,14 @@
-import React, { useState, useEffect } from "react";
-import ReactHtmlParser from "react-html-parser"
-import imag from "../../img/projectThumbnails/hw2.PNG"
-function PortfolioItem(props) {
-  // import img from "../../img/projectThumbnails${props.data.thumbnail";
-  // let img= require "../../img/projectThumbnails"+${props.data.thumbnail};
-  console.log({props});
-  let img = "../../img/projectThumbnails"+props.data.thumbnail;
-  console.log({img}); 
-    return (
-        // <div key={props.data.id} className="portfolio-item" style={{backgroundImage:`url(${img})` }} />
-<>
 
-<img src={require(img)} />
-</>
+ export default function PortfolioItem(props) {
+
+    return (
+      <div  key={props.data.id} className="col" style={{margin:"auto"}}>
+        <a rel="noreferrer" className="portfolio-item-link" target="_BLANK" href={props.data.externalLink}>
+          <div className="portfolio-item" style={{backgroundImage:`url(${props.data.thumbnail})` }} />
+        </a>
+        <a rel="noreferrer" className="github-link" target="_BLANK" href={props.data.github}>
+            <span className="project-title">{props.data.displayName} <i className="fab fa-github" /></span>
+        </a>
+       </div>
     );
  }
-  
- export default PortfolioItem;

@@ -5,18 +5,17 @@ import React, { useState, useEffect } from "react";
 import ReactHtmlParser from "react-html-parser"
 function CodeDisplay() {
 
-    const [about, setAbout] = useState({title:"Loading...", about:"Sorry, still trying to load"});
+    const [about, setAbout] = useState({title:"Loading...", about:"Loading..."});
 
     useEffect(()=>{   
+        
         getCodePage()
         .then(res=>{
             if(res){
                 setAbout(res.data[0]);
             }
         }); 
-
     },[]);
- 
 
     return (
         <div className="row" id="main">

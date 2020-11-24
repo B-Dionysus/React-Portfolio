@@ -1,7 +1,7 @@
 // Dependencies
 const express = require('express');
 const routes = require('./routes');
-
+let db = require("./models")
 // Express instance
 const app = express();
 
@@ -18,19 +18,10 @@ if (process.env.NODE_ENV === 'production') {
     app.use(express.static('client/build'))
 };
 
-// // API and View Routes
-// app.get("/test/",(res, req)=>
-//  // .get(categoryController.loadCatInfo)
-//  {
-//      console.log("Hello?");
-//      return res.json({test:"Hello"})
-//  }
-// );
-
 app.use(routes);
 // Start the server
-app.listen(PORT, () => {
+db.sequelize.sync().then(app.listen(PORT, () => {
     if (process.env.NODE_ENV !== 'production') {
         console.log(`Server listening at http://localhost:${PORT}`)
     };
-});
+}));

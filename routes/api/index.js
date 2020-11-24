@@ -10,6 +10,6 @@ const categoryController = require("../../controllers/categoryController");
 //     .get(categoryController.loadCatInfo)
 //  }
 // );
-router.get("/aboutInfo",categoryController.loadCatInfo);
+router.get("/aboutInfo",categoryController.loadAboutPage);
 module.exports = router;
  

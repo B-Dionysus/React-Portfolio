@@ -4,7 +4,7 @@
 }
 .projectTabs{
   position: relative;
-  z-index:-1;
+  z-index:1;
   border:1px solid black;
   background:light gray;
   border-bottom:none;
@@ -21,7 +21,6 @@
 .lastTab{
   border-top-right-radius: 1em;
   box-shadow: 5px 6px 17px rgb(0, 0, 0, .39);
-  z-index: -1;
 }
 #main{
   position: relative;
@@ -30,6 +29,7 @@
   box-shadow: 11px 9px 17px rgb(0, 0, 0, .39);
   z-index:2;
   background: rgba(255,255,255,.8);
+  font-size: large;
 }
 #main-left{
   padding:0;
@@ -39,15 +39,32 @@
 }
 #about{  
   background: rgba(255,255,255,.75);
+  max-height:550px;
+  overflow:auto; 
 }
 .projectTitle{
   text-align: center;
   font-weight: bold;
   text-shadow: 8px 5px 8px rgb(0, 0, 0, .34);
+  margin-bottom:1em;
+  border-bottom:1px solid gray;
 }
 blockquote{
   margin-top: .5em;;
   text-indent:.5em;
   font-family: 'Roboto', serif;
   margin-left:.5em;
+}
+
+.portfolio-item{
+  width: 30vw;
+  height: 30vw;
+  margin: auto;
+  margin-top: 2rem;
+  background-size: contain;
+  background-repeat: no-repeat;
+  border: 2px solid black;
+  border-radius: 1em;
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+  background-size:cover;
 }

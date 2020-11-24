@@ -9,8 +9,15 @@ module.exports = {
             where:{id:{[Op.eq]:1}}
         })
         .then(data=>{
-            console.log("db:");
-            console.log(data);
+            res.json(data); 
+        })
+    },
+    getCodePage:function(req, res) {
+        db.Category.findAll({
+            raw:true,
+            where:{id:{[Op.eq]:2}}
+        })
+        .then(data=>{
             res.json(data); 
         })
     }

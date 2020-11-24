@@ -1,4 +1,4 @@
-import heroImage from "../img/mainPhoto.2b.png"
+import heroImage from "../../img/mainPhoto.2b.png"
 function HeroImage() {
    return (
     <div className="col-12" id="image">

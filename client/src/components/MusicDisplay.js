@@ -1,4 +1,3 @@
-import AboutLeft from "./main/AboutLeft"
 import AboutRight from "./AboutRight";
 import {getAboutPageInfo} from "../utils/API"
 import React, { useState, useEffect } from "react";
@@ -21,10 +20,7 @@ function MainDisplay() {
 
     return (
     <div className="row" id="main">
-        <AboutLeft />
-        <div className="col-md-8">
-            <AboutRight title={about.title} aboutText={ReactHtmlParser(about.about)}/>
-        </div>
+        <AboutRight title={about.title} aboutText={ReactHtmlParser(about.about)}/>
     </div>
    );
  }

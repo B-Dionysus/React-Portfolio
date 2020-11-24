@@ -1,17 +1,16 @@
-import AboutLeft from "./main/AboutLeft"
+import CodePortfolio from "./portfolio/CodePortfolio"
 import AboutRight from "./AboutRight";
-import {getAboutPageInfo} from "../utils/API"
+import {getCodePage} from "../utils/API"
 import React, { useState, useEffect } from "react";
 import ReactHtmlParser from "react-html-parser"
-function MainDisplay() {
+function CodeDisplay() {
 
     const [about, setAbout] = useState({title:"Loading...", about:"Sorry, still trying to load"});
 
     useEffect(()=>{   
-        getAboutPageInfo()
+        getCodePage()
         .then(res=>{
             if(res){
-                console.log({res});
                 setAbout(res.data[0]);
             }
         }); 
@@ -20,13 +19,11 @@ function MainDisplay() {
  
 
     return (
-    <div className="row" id="main">
-        <AboutLeft />
-        <div className="col-md-8">
-            <AboutRight title={about.title} aboutText={ReactHtmlParser(about.about)}/>
+        <div className="row" id="main">
+        <AboutRight title={about.title} aboutText={ReactHtmlParser(about.about)}/>
+            <CodePortfolio title={about.title} aboutText={ReactHtmlParser(about.about)}/>
         </div>
-    </div>
    );
  }
  
- export default MainDisplay;
+ export default CodeDisplay;

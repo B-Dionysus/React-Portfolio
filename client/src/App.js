@@ -21,9 +21,9 @@ function App() {
                       
      <Router>
         <div className="row" id="tabs">
-            <div className="col currentTab projectTabs"><Link className={path === "/" ? "nav-link-active" : "nav-link"} to="/">Main</Link></div>
-            <div className="col menuTab projectTabs" ><Link className={path === "/coding" ? "nav-link-active" : "nav-link"} to="/coding">Code</Link></div>
-            <div className="col lastTab projectTabs"><Link className={path === "/music" ? "nav-link-active" : "nav-link"} to="/music">Music</Link></div>
+            <div className="col currentTab projectTabs"><Link className={path === "/" ? "nav-link" : "nav-link"} to="/">Main</Link></div>
+            <div className="col menuTab projectTabs" ><Link className={path === "/coding" ? "nav-link" : "nav-link"} to="/coding">Code</Link></div>
+            <div className="col lastTab projectTabs"><Link className={path === "/music" ? "nav-link" : "nav-link"} to="/music">Music</Link></div>
         </div>
           <Route exact path="/" component={MainDisplay} />
           <Route exact path="/coding" component={CodeDisplay} />

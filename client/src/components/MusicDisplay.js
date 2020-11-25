@@ -1,28 +1,28 @@
-import AboutRight from "./AboutRight";
-import {getAboutPageInfo} from "../utils/API"
+import Portfolio from "./portfolio/Portfolio"
+import MainTextContent from "./MainTextContent";
+import {getMusicPage} from "../utils/API"
 import React, { useState, useEffect } from "react";
 import ReactHtmlParser from "react-html-parser"
-function MainDisplay() {
+function CodeDisplay() {
+    // This component displays the title of the page and some basic intro text. Those are both
+    // stored in the state variable here, and loaded via an API call to the database in userEffect, below
+    const [about, setAbout] = useState({title:"Loading...", about:"Loading..."});
 
-    const [about, setAbout] = useState({title:"Loading...", about:"Sorry, still trying to load"});
-
-    useEffect(()=>{   
-        
-        getAboutPageInfo()
+    useEffect(()=>{           
+        getMusicPage()
         .then(res=>{
             if(res){
                 setAbout(res.data[0]);
             }
         }); 
-
     },[]);
- 
 
     return (
-    <div className="row" id="main">
-        <AboutRight title={about.title} aboutText={ReactHtmlParser(about.about)}/>
-    </div>
+        <div className="row" id="main">
+            <MainTextContent title={about.title} aboutText={ReactHtmlParser(about.about)}/>
+            <Portfolio cat="3" title={about.title} aboutText={ReactHtmlParser(about.about)}/>
+        </div>
    );
  }
  
- export default MainDisplay;
+ export default CodeDisplay;

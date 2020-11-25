@@ -9,3 +9,6 @@ export async function getCodePage(){
 export async function getPortfolio(cat){
     return axios.get("/api/portfolio/"+cat);
 }
+export async function getMusicPage(){
+    return axios.get("/api/music");
+}

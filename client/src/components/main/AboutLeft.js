@@ -1,5 +1,6 @@
 import HeroImage from "./HeroImage";
-
+// This component sits just ot the lef tof the main text content on the main page, and holds the 
+// hero image and my contact information
  function AboutLeft() {
    return (
     <div className="col-12 col-md-4" id="main-left">

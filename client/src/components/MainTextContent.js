@@ -1,5 +1,5 @@
 
- function AboutRight(props) {
+ function MainTextContent(props) {
    return (
     <div className="col-12 " id="main-right">
         <div className="col-12" id="about">
@@ -10,4 +10,4 @@
     );
  }
  
- export default AboutRight; 
+ export default MainTextContent; 

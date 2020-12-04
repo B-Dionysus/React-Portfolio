@@ -12,7 +12,7 @@ import HeroImage from "./HeroImage";
                 <li className="list-group list-group-flush">773-209-2241</li>
                 <a rel="noreferrer" className="list-group list-group-flush col-12" target="_BLANK" href="https://www.linkedin.com/in/benjamin-dionysus-10a638182/">Linked In</a>
                 <a rel="noreferrer" className="list-group list-group-flush col-12" target="_BLANK" href="https://github.com/B-Dionysus">Github</a>
-                <a rel="noreferrer" className="list-group list-group-flush col-12" target="_BLANK" href="./client/public/docs/dionysusResume2020.7b.pdf">Resume (PDF)</a>
+                <a rel="noreferrer" className="list-group list-group-flush col-12" target="_BLANK" href="https://drive.google.com/file/d/1zQEYziV1RfxfWnq_xyS5lmKEJibf82O0/view?usp=sharing">Resume (PDF)</a>
             </ul>
         </div>
     </div>
